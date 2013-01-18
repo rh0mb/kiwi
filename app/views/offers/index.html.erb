@@ -1,6 +1,26 @@
-<h1>Listing offers</h1>
 
+<!---------- Homepage --------
+-------------------------------->
+
+<div class="container-fluid">
+<div class="row-fluid show-grid">
+
+<!---------- Welcome message ---------->
+
+<div class="span12" id="welcomemessage"><h2>Welcome to Kiwi!!!!</h2></div>
+<div class="span12" id="info"><p>jshbc jsahbdcjsahbcjksabcd kjasdb cjkahsb dcjkha bsdjkbchasjkh dbcjkasxax axaxax axaxa sxasx asjas hdbcjas khdbc jkashd bckjahs dbckjah sbdckjashdbcsaxaxasaxsx asxasxa sxasxasxasxa sx asxasx asxasxas</p></div>
+
+
+
+
+
+<div class="span12" id="listings">
+<h1>Todays Deals</h1>
+</div>
+
+<div class="span12" id="deal1">
 <table>
+<div class="span5" id="namedeal">
   <tr>
     <th>Name</th>
     <th>Deal</th>
@@ -8,8 +28,10 @@
     <th></th>
     <th></th>
   </tr>
+</div>
 
 <% @offers.each do |offer| %>
+
   <tr>
     <td><%= offer.name %></td>
     <td><%= offer.deal %></td>
@@ -22,4 +44,9 @@
 
 <br />
 
+</div>
 <%= link_to 'New Offer', new_offer_path %>
+
+</div>
+</div>
+</div>
