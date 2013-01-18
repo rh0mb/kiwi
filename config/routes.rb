@@ -1,5 +1,10 @@
 Kiwi::Application.routes.draw do
+  devise_for :users
+
   resources :offers
+  root to: 'offers#index'
+
+
 
 
   # The priority is based upon order of creation:
