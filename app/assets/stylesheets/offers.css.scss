@@ -8,27 +8,88 @@
 /******************************
 	Welcome Message & Info
 *******************************/
+
 #welcomemessage {
-	margin-top: 80px;
+	margin-top: 30px;
 	text-align: center;
-	color: gray;
+	color: #33D685;
 }
 
 #info {
 	margin-top: 20px;
 	text-align: center;
+	color: #B8B8B8;
 }
 
-#listings {
+/******************************
+	Welcome Pic
+*******************************/
 
-	margin-top: 450px;
-	text-align: center;
+#intropic {
+	background-image:url('kiwilogo.png');
+	margin-top: 50px;
+	padding-bottom: 300px;
+}
+
+/******************************
+	Sign Up Button!
+*******************************/
+
+
+.kiwisignup {
+	float: left;
+	margin-top: 100px;
+	margin-left: 220px;
+	color: white;
+	background: #FFA347;
+	padding: 20px 150px;
+	border: none;
+	border-radius: 5px;
+	font-size: 2em;
+}
+
+.kiwisignup:hover {
+	background-color: #FFBF7E;
+}
+
+
+
+/******************************
+	Listing Stuff
+*******************************/
+
+
+#listings {
+	margin-top: 100px;
 }
 
 #deal1	{
-
 	background: #F2F2F2;
 	margin-top: 100px;
 	padding: 20px;
-
 }
+
+/******************************
+	New.html.erb - "New Deal"
+*******************************/
+
+#offertitle {
+	color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

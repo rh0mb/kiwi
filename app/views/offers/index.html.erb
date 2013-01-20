@@ -7,12 +7,23 @@
 
 <!---------- Welcome message ---------->
 
-<div class="span12" id="welcomemessage"><h2>Welcome to Kiwi!!!!</h2></div>
+<div class="span12" id="welcomemessage"><h1>Stay Local . Save Money</h1></div>
 <div class="span12" id="info"><p>jshbc jsahbdcjsahbcjksabcd kjasdb cjkahsb dcjkha bsdjkbchasjkh dbcjkasxax axaxax axaxa sxasx asjas hdbcjas khdbc jkashd bckjahs dbckjah sbdckjashdbcsaxaxasaxsx asxasxa sxasxasxasxa sx asxasx asxasxas</p></div>
 
+<!---------- Kiwi Picture Baby ---------->
+
+<div class="span12" id="intropic">
+</div>
+
+<!---------- Sign Up Button! ---------->
 
 
+<div class="span12" id="Signup">
+  <button class="kiwisignup" type="button">Sign Up!</button>
+ </div>
 
+
+<!---------- Deals ---------->
 
 <div class="span12" id="listings">
 <h1>Todays Deals</h1>
@@ -33,7 +44,7 @@
 <% @offers.each do |offer| %>
 
   <tr>
-    <td><%= offer.name %></td>
+    <td>name</td>
     <td><%= offer.deal %></td>
     <td><%= link_to 'Show', offer %></td>
     <td><%= link_to 'Edit', edit_offer_path(offer) %></td>

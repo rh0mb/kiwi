@@ -11,9 +11,16 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a href="#" class="brand">Kiwi</a>
+        <div class="logo">
+        <%= image_tag("kiwilogo.png", :alt => "kiwi") %>
+      </div>
+      <div class="homenavlinks"
         <ul class="nav">
-          <li><%= link_to "All Statuses", offers_path %></li>
+          <li><%= link_to "About", offers_path %></li>
+          <li><%= link_to "Company", offers_path %></li>
+          <li><%= link_to "Sign In", offers_path %></li>
+          <li><%= link_to "Sign Up!", offers_path %></li>
+      </div>
       </div>
     </div>
   </div>
@@ -26,5 +33,19 @@
 
 </div>
 
+
+
+
+
+
+
+<div id="endoptions">
+  <ul>
+    <li><a href="../MailoWebsite/mailoabout.html">About</a></li>
+    <li><a href="../MailoWebsite/mailocompany.html">Company</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</div>
 </body>
 </html>
