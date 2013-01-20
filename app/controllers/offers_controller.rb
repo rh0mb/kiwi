@@ -42,7 +42,7 @@ class OffersController < ApplicationController
   # POST /offers
   # POST /offers.json
   def create
-    @offer = Offer.new(params[:offer])
+    @offer = current_user.offers.new(params[:offer])
 
     respond_to do |format|
       if @offer.save
@@ -58,8 +58,10 @@ class OffersController < ApplicationController
   # PUT /offers/1
   # PUT /offers/1.json
   def update
-    @offer = Offer.find(params[:id])
-
+    @offer = current_user.offers.find(params[:id])
+    if params[:offer] && params[:offer].has_key?(:user_id)
+      params[:offer].delete(:user_id) 
+    end
     respond_to do |format|
       if @offer.update_attributes(params[:offer])
         format.html { redirect_to @offer, notice: 'Offer was successfully updated.' }
