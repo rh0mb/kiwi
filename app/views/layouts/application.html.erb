@@ -18,8 +18,13 @@
         <ul class="nav">
           <li><%= link_to "About", offers_path %></li>
           <li><%= link_to "Company", offers_path %></li>
-          <li><%= link_to "Sign In", offers_path %></li>
-          <li><%= link_to "Sign Up!", offers_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.first_name, edit_user_registration_path %></li>
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up!", new_user_registration_path %></li>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
       </div>
       </div>
     </div>
@@ -27,10 +32,14 @@
 
 
 <div class="container">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% flash.each do |type, message| %>
+    <div class="alert <%= flash_class type %>">
+      <button class="close" data-dismiss="alert">x</button>
+      <%= message %>
+    </div>
+  <% end %>
+  
   <%= yield %>
-
 </div>
 
 
