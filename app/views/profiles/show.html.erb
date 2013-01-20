@@ -1,0 +1,14 @@
+<div class="page-header">
+	<h1>Hello <%= @user.first_name %>!</h1>
+	<p> This is your profile page </p>
+</div>
+
+<% if @offers %>
+	<% @offers.each do |offer| %>
+	<div class="well">
+		<%= offer.deal %>
+		<hr/>
+	</div>
+	<% end %>
+	<% end %>
+

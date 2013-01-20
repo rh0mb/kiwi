@@ -1,8 +1,12 @@
 Kiwi::Application.routes.draw do
+  get "profiles/show"
+
   devise_for :users
 
   resources :offers
   root to: 'offers#index'
+
+  get '/:id', to: 'profiles#show'
 
 
 
